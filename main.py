@@ -8,7 +8,7 @@ from src.gui import start_gui
 
 # main function
 def main():
-    start_gui()
+    pass
 # run main
 if __name__ == '__main__':
     main()
