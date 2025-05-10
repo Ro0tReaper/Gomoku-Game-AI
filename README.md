@@ -72,16 +72,22 @@ Contributions are welcome! Please open an issue or submit a pull request for maj
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+All rights in this project reserved to CU FCAI authority and students 
 
 ## 💬 Contact
 
-For any inquiries, please reach out to **Your Name** at [youremail@example.com](mailto:youremail@example.com).
+For any inquiries, please reach out to **Mohamed yossery** at [cfmohammed@gmail.com](mailto:cfmohammed24@google.com).
 
 ## ⭐ Acknowledgments
 
-Special thanks to the AI course instructors for their guidance and support.
+Special thanks to the AI course instructors for their guidance and support: 
+- Eng. Reem Ehab.
+- Dr. Sabah Sayed
 
+And huge thanks to the contributers of this project:
+- Mohamed yossery
+- Omar saleh
+- Omar ayman
 ---
 
-Happy Coding! 🚀
+Networks and Cybersecurity department was honored to present to you this masterpeace! 🚀
