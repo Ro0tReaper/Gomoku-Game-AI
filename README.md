@@ -85,8 +85,8 @@ Special thanks to the AI course instructors for their guidance and support:
 - Dr. Sabah Sayed
 
 And huge thanks to the contributers of this project:
-- Mohamed yossery
-- Ahmed Ashraf
+- Mohamed yossery (WeirdAssProgrammer)
+- Ahmed Ashraf     (CSCOD3X)
 - Omar ayman
 ---
 
