@@ -1,3 +1,4 @@
+
 # imports and liberaries
 import random
 from src.game import Game
@@ -7,7 +8,7 @@ from src.gui import start_gui
 
 # main function
 def main():
-    pass
+    start_gui()
 # run main
 if __name__ == '__main__':
     main()
