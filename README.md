@@ -86,7 +86,7 @@ Special thanks to the AI course instructors for their guidance and support:
 
 And huge thanks to the contributers of this project:
 - Mohamed yossery
-- Omar saleh
+- Ahmed Ashraf
 - Omar ayman
 ---
 
