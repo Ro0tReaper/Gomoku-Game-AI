@@ -1,4 +1,2 @@
-tkinter
-random
-Pillow
-os
+# Image handling
+Pillow>=9.0.0
