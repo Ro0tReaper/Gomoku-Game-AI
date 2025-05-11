@@ -1,4 +1,4 @@
-class GomokuGame:
+class Game:
     def __init__(self, size=15):
         self.grid_size = size
         self.game_grid = [[None for _ in range(size)] for _ in range(size)]
