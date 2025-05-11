@@ -65,9 +65,9 @@ def start_gui():
 
                 # Set the click behavior to set the player piece
                 def on_click(btn: tk.Button = btn):
-                    if not btn.image:  # Only set if not already set
-                        btn.config(image=piece_image, width=30, height=30)
-                        btn.image = piece_image  # Keep a reference to avoid garbage collection
+                 
+                    btn.config(image=piece_image, width=20, height=20)
+                    btn.image = piece_image  # Keep a reference to avoid garbage collection
 
                 btn.config(command=on_click)
                 btn.grid(row=x, column=y, padx=2, pady=2)
