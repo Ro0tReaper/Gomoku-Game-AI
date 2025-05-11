@@ -1,49 +1,52 @@
-# src/gui.py
-
 import tkinter as tk
+from os import _exit as exit_os
+from tkinter import messagebox
+from PIL import Image, ImageTk
 from src.game import Game
-from src.ai import MinimaxAI
-from src.ai import AlphaBetaAI
-
+from src.ai import MinimaxAI, AlphaBetaAI
 
 def start_gui():
     root = tk.Tk()
-    root.title("Gomoku - AI vs AI")
-    game = Game()
-    ai1 = MinimaxAI()
-    ai2 = AlphaBetaAI()
-    current_ai = ai1
-    buttons = []
+    root.title("Gomoku Game")
+    root.geometry("800x600")
+    root.resizable(False, False)
 
-    def update_board():
-        for x in range(game.size):
-            for y in range(game.size):
-                buttons[x][y].config(text=game.board[x][y])
-        winner = game.check_winner()
-        if winner:
-            result_label.config(text=f"{winner} wins!")
+    # Load and set background image
+    try:
+        bg_image = Image.open("assets/image.png").resize((800, 600))
+        bg_photo = ImageTk.PhotoImage(bg_image)
+    except Exception as e:
+        messagebox.showerror("Error", f"Background image not found: {e}")
+        exit_os(1)
 
-    for x in range(game.size):
-        row = []
-        for y in range(game.size):
-            btn = tk.Button(root, text='.', width=2, height=1)
-            btn.grid(row=x, column=y)
-            row.append(btn)
-        buttons.append(row)
+    canvas = tk.Canvas(root, width=800, height=600)
+    canvas.pack(fill="both", expand=True)
+    canvas.create_image(0, 0, image=bg_photo, anchor="nw")
 
-    result_label = tk.Label(root, text="")
-    result_label.grid(row=game.size, columnspan=game.size)
+    # Title
+    canvas.create_text(400, 100, text="Gomoku Game", font=("Helvetica", 36, "bold"), fill="white")
 
-    def ai_vs_ai():
-        nonlocal current_ai
-        if not game.is_game_over():
-            ai_move = current_ai.get_best_move(game)
-            symbol = 'X' if current_ai == ai1 else 'O'
-            game.make_move(ai_move[0], ai_move[1], symbol)
-            update_board()
-            current_ai = ai2 if current_ai == ai1 else ai1
-            root.after(500, ai_vs_ai)  # Delay for better visualization
+    # Buttons
+    def start_human_vs_ai():
+        messagebox.showinfo("Mode Selected", "Human vs AI mode selected.")
+        print(f"Mode: {start_human_vs_ai.__name__}")
 
-    # Start the AI vs AI loop
-    ai_vs_ai()
+    def start_ai_vs_ai():
+        messagebox.showinfo("Mode Selected", "AI vs AI mode selected.")
+        print(f"Mode: {start_ai_vs_ai.__name__}")
+
+    def quit():
+        messagebox.showinfo("Qutting", "Cya ;D")
+        print("Byee~")
+        exit_os(0)
+
+
+    human_vs_ai_btn = tk.Button(root, text="Human vs AI", font=("Helvetica", 16), width=20, command=start_human_vs_ai)
+    ai_vs_ai_btn = tk.Button(root, text="AI vs AI", font=("Helvetica", 16), width=20, command=start_ai_vs_ai)
+    exit_btn = tk.Button(root, text="Quit", font=("Helvetica", 16), width=20, command=quit)
+
+    canvas.create_window(400, 250, window=human_vs_ai_btn)
+    canvas.create_window(400, 320, window=ai_vs_ai_btn)
+    canvas.create_window(400, 400, window=exit_btn)
+
     root.mainloop()
