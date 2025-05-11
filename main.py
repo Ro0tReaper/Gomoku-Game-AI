@@ -1,8 +1,8 @@
 
 # imports and liberaries
-import random
-from src.game import Game
-from src.ai import AlphaBetaAI, MinimaxAI
+# import random
+# from src.game import Game
+# from src.ai import AlphaBetaAI, MinimaxAI
 from src.gui import start_gui
 
 
