@@ -34,7 +34,6 @@ class MinimaxAI:
         return score
 
     def get_candidate_moves(self, game):
-        # only consider empty cells near existing stones
         radius = 2
         moves = set()
         if not game.history:
