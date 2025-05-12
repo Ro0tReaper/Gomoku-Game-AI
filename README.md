@@ -26,8 +26,8 @@ Gomoku, also known as **Five in a Row**, is a strategy board game where the goal
 Clone the repository:
 
 ```bash
-$ git clone https://github.com/your-username/gomoku-game-solver.git
-$ cd gomoku-game-solver
+$ git clone https://github.com/Ro0tReaper/Gomoku-Game-AI.git
+$ cd Gomoku-Game-AI
 ```
 
 Install required packages:
@@ -41,7 +41,7 @@ $ pip install -r requirements.txt
 To start the game:
 
 ```bash
-$ python gomoku.py
+$ python main.py
 ```
 
 ## 🧠 How It Works
